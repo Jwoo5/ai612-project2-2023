@@ -2,6 +2,9 @@
 
 This repository is for the training framework to support AI612 Project 2, Multi-task Multi-source Learning.
 
+### Recent Updates
+* (2023.04.13) Some minor bugs (import errors) in checkpoint_utils.py and progress_bar.py were handled.
+
 ### Objective
 Given ICU records of 12 hours since the ICU admission, perform 28 prediction tasks, for three datasets. The tasks are:
 * Mortality prediction (short, long)
