@@ -21,11 +21,7 @@ import torch
 
 from .meters import AverageMeter, StopwatchMeter, TimeMeter
 
-from fairseq_signals.utils import pdb
-
-
 logger = logging.getLogger(__name__)
-
 
 def progress_bar(
     iterator,
