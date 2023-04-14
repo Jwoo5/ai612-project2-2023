@@ -15,7 +15,7 @@ class FixedLRSchedule(LRScheduler):
     def __init__(self, cfg: Namespace, optimizer, **kwargs):
         super().__init__(cfg, optimizer, **kwargs)
 
-        self.lr = cfg.lr
+        self.lr = cfg.lr[0]
         if cfg.warmup_updates > 0:
             self.warmup_factor = 1.0 / cfg.warmup_updates
         else:
