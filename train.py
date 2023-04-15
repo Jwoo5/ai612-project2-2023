@@ -6,6 +6,7 @@
 
 import argparse
 import logging
+import logging.config
 from typing import Dict, Any, List, Optional
 import math
 import random
@@ -289,6 +290,7 @@ def get_parser():
     return parser
 
 def main(args: argparse.Namespace) -> None:
+    breakpoint()
     metrics.reset()
     
     np.random.seed(args.seed)
