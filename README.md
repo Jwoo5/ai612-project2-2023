@@ -3,6 +3,7 @@
 This repository is for the training framework to support AI612 Project 2, Multi-task Multi-source Learning.
 
 ### Recent Updates
+* (2023.04.15) Added importing `logging.config` explictly in train.py
 * (2023.04.14) Fixed minor bug occurred when activating warmup learning rate.
 * (2023.04.13) Some minor bugs (import errors) in checkpoint_utils.py and progress_bar.py were handled.
 
