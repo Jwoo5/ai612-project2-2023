@@ -290,7 +290,6 @@ def get_parser():
     return parser
 
 def main(args: argparse.Namespace) -> None:
-    breakpoint()
     metrics.reset()
     
     np.random.seed(args.seed)
