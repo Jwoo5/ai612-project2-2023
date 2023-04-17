@@ -38,6 +38,7 @@ class Trainer(object):
         criterion: MultiTaskCriterion,
         train: torch.utils.data.Dataset = None,
         test: torch.utils.data.Dataset = None,
+        **kwargs,
     ):
         self.args = args
 
@@ -90,7 +91,7 @@ class Trainer(object):
         self.iterator = DataLoader(
             dataset=dataset,
             batch_size=args.batch_size,
-            shuffle=False if distributed_utils.get_data_parallel_world_size() > 1 else True,
+            shuffle=False if distributed_utils.get_data_parallel_world_size() > 1 or test is not None else True,
             sampler=(
                 DistributedSampler(dataset)
             ) if distributed_utils.get_data_parallel_world_size() > 1 else None,
@@ -103,7 +104,7 @@ class Trainer(object):
             self.valid_iterator = DataLoader(
                 dataset=valid_dataset,
                 batch_size=args.batch_size,
-                shuffle=False if distributed_utils.get_data_parallel_world_size() > 1 else True,
+                shuffle=False,
                 sampler=(
                     DistributedSampler(valid_dataset)
                 ) if distributed_utils.get_data_parallel_world_size() > 1 else None,
