@@ -29,9 +29,15 @@ def main(args):
         Rename the file name with your student number.
     
     Note:
-        This script should dump processed features to the --dest directory.
+        1. This script should dump processed features to the --dest directory.
         Note that --dest directory will be an input to your dataset class (i.e., --data_path).
         You can dump any type of files such as json, cPickle, or whatever your dataset can handle.
+
+        2. If you use vocabulary, you should specify your vocabulary file(.pkl) in this code section.
+        Also, you must submit your vocabulary file({student_id}_vocab.pkl) along with the scripts.
+        Example:
+            with open('./20231234_vocab.pkl', 'rb') as f:
+                (...)
     """
 
     root_dir = args.root
