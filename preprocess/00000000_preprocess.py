@@ -20,6 +20,13 @@ def get_parser():
         metavar="DIR",
         help="output directory"
     )
+
+    parser.add_argument(
+        "--sample_filtering",
+        type=bool,
+        default=True,
+        help="indicator to prevent filtering from being applies to the test dataset."
+    )
     return parser
 
 def main(args):
@@ -38,6 +45,12 @@ def main(args):
         Example:
             with open('./20231234_vocab.pkl', 'rb') as f:
                 (...)
+
+        3. For fair comparison, we do not allow to filter specific samples when using test dataset.
+        Therefore, if you filter some samples from the train dataset,
+        you must use the '--sample_filtering' argument to prevent filtering from being applied to the test dataset.
+        We will set the '--sample_filtering' argument to False and run the code for inference.
+        We also check the total number of test dataset.
     """
 
     root_dir = args.root
