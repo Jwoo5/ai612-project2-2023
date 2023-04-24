@@ -3,6 +3,7 @@
 This repository is for the training framework to support AI612 Project 2, Multi-task Multi-source Learning.
 
 ### Recent Updates
+* (2023.04.24) Set action of '--sample_filtering' as 'store_true'
 * (2023.04.18) Added '--sample_filtering' argument in '00000000_preprocess.py'
 * (2023.04.17) Removed unnecessary breakpoint in `main()` & Added test codes (`test.py`)
 * (2023.04.15) Added importing `logging.config` explictly in train.py
