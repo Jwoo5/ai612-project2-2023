@@ -20,7 +20,6 @@ def get_parser():
         metavar="DIR",
         help="output directory"
     )
-
     parser.add_argument(
         "--sample_filtering",
         action='store_true',
