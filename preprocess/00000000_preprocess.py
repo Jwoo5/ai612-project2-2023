@@ -23,8 +23,7 @@ def get_parser():
 
     parser.add_argument(
         "--sample_filtering",
-        type=bool,
-        default=True,
+        action='store_true',
         help="indicator to prevent filtering from being applies to the test dataset."
     )
     return parser
