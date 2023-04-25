@@ -2,6 +2,7 @@ import os
 import sys
 import argparse
 import logging
+import logging.config
 import time
 from typing import Dict, List, Optional, Any
 
